@@ -1,0 +1,40 @@
+on: [push]
+
+name: Python
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    # checkout the repo
+    - name: 'Checkout GitHub Action' 
+      uses: actions/checkout@master
+   
+    - uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+        
+    - name: Setup Python 3.7
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.7
+    
+    - name: 'Run pip'
+      shell: bash
+      run: |
+        # If your web app project is not located in your repository's root
+        # Please change your directory for pip in pushd
+        pushd .
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt --target=".python_packages/lib/python3.7/site-packages"
+        popd
+               
+    # deploy web app using Azure credentials
+    - uses: azure/webapps-deploy@v1
+      with:
+        app-name: 'shing19'
+
+    # Azure logout 
+    - name: logout
+      run: |
+        az logout
