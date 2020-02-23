@@ -12,7 +12,8 @@ def index():
 
 @bp.route('/design')
 def design():
-    return render_template('design.html')
+    projects = Project.query.order_by(Project.timestamp.desc())
+    return render_template('design.html', projects=projects)
 
 @bp.route('/weblab')
 def weblab():
@@ -39,6 +40,9 @@ def project():
     form = ProjectForm()
     item = 'Project'
     if form.validate_on_submit():
+        project = Project(topic=form.topic.data, name=form.name.data, timestamp=form.timestamp.data, timespan=form.timespan.data, description=form.description.data)
+        db.session.add(project)
+        db.session.commit()
         return redirect('/design')
     return render_template('new.html', form=form, item=item)
 
