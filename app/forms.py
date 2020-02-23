@@ -3,10 +3,10 @@ from wtforms import StringField, TextAreaField, DateField, SubmitField, IntegerF
 from wtforms.validators import DataRequired
 
 class ProjectForm(FlaskForm):
-    topic = StringField('Topic', validators=[DataRequired()])
+    topic = StringField('Project Topic', validators=[DataRequired()])
     name = StringField('Name in Database', validators=[DataRequired()])    
-    timestamp = DateField('Start on (format<%Y-%m-%d>)', validators=[DataRequired()])   # format<%Y-%m-%d>
-    timespan = IntegerField('Span (weeks)', validators=[DataRequired()])     # weeks
+    timestamp = DateField('Start on <%Y-%m-%d>', validators=[DataRequired()])   # format<%Y-%m-%d>
+    timespan = IntegerField('Span Weeks', validators=[DataRequired()])     # weeks
     description = TextAreaField('Description')
     submit = SubmitField('Upload')
 
