@@ -61,3 +61,7 @@ def album():
     if form.validate_on_submit():
         return redirect('/photography')
     return render_template('new.html', form=form, item=item)
+
+@bp.route('/test', methods=['GET', 'POST'])
+def test():
+    return render_template('test.html')
