@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+  <div class="navbar-nav-scroll">
+      <ul class="navbar-nav bd-navbar-nav flex-row">
+          <li class="nav-item"><a class="nav-link" href="/index">Welcome</a></li>
+          <li class="nav-item"><a class="nav-link" href="/design">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="/about">Resume</a></li>
+          <li class="nav-item"><a class="nav-link active" href="/portfolio">Portfolio</a></li>
+      </ul>
+  </div>
+</header>
+<div class="container">
+    <div class="row">
+        <div class="col center-me">
+            {% for file in files %}
+                <img src="{{ url_for('static', filename=file) }}">            
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

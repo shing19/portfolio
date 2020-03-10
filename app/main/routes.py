@@ -35,6 +35,14 @@ def adventure():
 def about():
     return render_template('about.html')
 
+@bp.route('/portfolio')
+def portfolio():
+    files = []
+    for i in range(53):
+        file = '/portfolio/' + str(i) + ".png"
+        files.append(file)
+    return render_template('portfolio.html', files=files)
+
 @bp.route('/design/new', methods=['GET', 'POST'])
 def project():
     form = ProjectForm()

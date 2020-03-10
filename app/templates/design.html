@@ -7,6 +7,7 @@
             <li class="nav-item"><a class="nav-link" href="/index">Welcome</a></li>
             <li class="nav-item"><a class="nav-link active" href="/design">Projects</a></li>
             <li class="nav-item"><a class="nav-link" href="/about">Resume</a></li>
+            <li class="nav-item"><a class="nav-link" href="/portfolio">Portfolio</a></li>
         </ul>
     </div>
   </header>
@@ -19,37 +20,37 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id='nav-content'>
         <li class="nav-item active">
-          <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">耐斯饭店服务设计<span class="sr-only">(current)</span></a>
+          <a class="nav-link active" id="v-pills-project4-tab" data-toggle="pill" href="#v-pills-project4" role="tab" aria-controls="v-pills-project4" aria-selected="true">耐斯大饭店服务设计<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">辅助屏易用性因素分析</a>
+          <a class="nav-link" id="v-pills-project3-tab" data-toggle="pill" href="#v-pills-project3" role="tab" aria-controls="v-pills-project3" aria-selected="false">辅助触控屏的易用性因素分析</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+          <a class="nav-link" id="v-pills-project2-tab" data-toggle="pill" href="#v-pills-project2" role="tab" aria-controls="v-pills-project2" aria-selected="false">互动装置艺术 Yun Lantern</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+          <a class="nav-link" id="v-pills-project1-tab" data-toggle="pill" href="#v-pills-project1" role="tab" aria-controls="v-pills-project1" aria-selected="false">人工智能与深度学习</a>
         </li>
       </ul>
     </div>
   </nav>
   <!--电脑-->
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <!--侧边栏导航-->
-      <div class="col-3 navbar-wiki">
+      <div class="col-3 navbar-wiki" style="left: 10px;">
         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="padding: 20px;">
-          <a class="nav-link active" id="v-pills-project1-tab" data-toggle="pill" href="#v-pills-project1" role="tab" aria-controls="v-pills-project1" aria-selected="true">耐斯饭店服务设计</a>
-          <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">辅助屏易用性因素分析</a>
-          <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
-          <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+          <a class="nav-link active" id="v-pills-project4-tab" data-toggle="pill" href="#v-pills-project4" role="tab" aria-controls="v-pills-project4" aria-selected="true">耐斯大饭店服务设计</a>
+          <a class="nav-link" id="v-pills-project3-tab" data-toggle="pill" href="#v-pills-project3" role="tab" aria-controls="v-pills-project3" aria-selected="false">辅助触控屏的易用性因素分析</a>
+          <a class="nav-link" id="v-pills-project2-tab" data-toggle="pill" href="#v-pills-project2" role="tab" aria-controls="v-pills-project2" aria-selected="false">互动装置艺术 Yun Lantern</a>
+          <a class="nav-link" id="v-pills-project1-tab" data-toggle="pill" href="#v-pills-project1" role="tab" aria-controls="v-pills-project1" aria-selected="false">人工智能与深度学习</a>
         </div>
       </div>
       <!--文章-->
       <div class="col main-content">
         <div class="tab-content" id="v-pills-tabContent">
           <!--第一篇-->
-          <div class="tab-pane fade show active" id="v-pills-project1" role="tabpanel" aria-labelledby="v-pills-project1-tab">
+          <div class="tab-pane fade show active" id="v-pills-project4" role="tabpanel" aria-labelledby="v-pills-project4-tab">
             <!--图片展示-->
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
               <ol class="carousel-indicators">
@@ -80,9 +81,9 @@
             {{ read_md('app/static/projects/nice_hotel/content.md')|md|safe }}
           </div>
           <!--第二篇-->
-          <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...1</div>
-          <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...2</div>
-          <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...3</div>
+          <div class="tab-pane fade" id="v-pills-project3" role="tabpanel" aria-labelledby="v-pills-project3-tab">...探讨辅助屏幕的触控屏易用性分析:以 MACBOOK TOUCH BAR 为例...</div>
+          <div class="tab-pane fade" id="v-pills-project2" role="tabpanel" aria-labelledby="v-pills-project2-tab">...互动装置艺术 Yun Lantern...</div>
+          <div class="tab-pane fade" id="v-pills-project1" role="tabpanel" aria-labelledby="v-pills-project1-tab">...基于 CNN LeNet 深度学习：机车安全帽识别与记录...</div>
         </div>
       </div>
     </div>
