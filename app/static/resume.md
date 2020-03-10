@@ -2,7 +2,7 @@
 手机：13136766473  
 邮箱：shing19@outlook.com  
 作品：https://shing19.azurewebsites.net/design  
-***
+<br>
 语言：英语（6级）、日语（N2）  
 方向：人机交互 HCI 研究、服务设计、工业设计  
 软件：Adobe Ps Pr Id Ai An、Creo(Pro/E)、Sketch、AutoCAD、Keyshot、Rhino、SPSS  

@@ -1,13 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
-<br><br>
-<div class="container">
-    <div class="row">
-        <div class="col-9 center-me">
-            <div class="md">
-                {{ read_md('app/static/resume.md')|md|safe }}
-            </div>
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+  <div class="navbar-nav-scroll">
+      <ul class="navbar-nav bd-navbar-nav flex-row">
+          <li class="nav-item"><a class="nav-link" href="/index">Welcome</a></li>
+          <li class="nav-item"><a class="nav-link" href="/design">Projects</a></li>
+          <li class="nav-item"><a class="nav-link active" href="/about">Resume</a></li>
+      </ul>
+  </div>
+</header>
+<div class="row">
+    <div class="col-11 center-me main-page" >
+        <div class="md">
+            {{ read_md('app/static/resume.md')|md|safe }}
         </div>
     </div>
 </div>

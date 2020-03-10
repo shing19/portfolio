@@ -511,6 +511,9 @@
 
     <!-- Costumed CSS -->
     <style>
+      .bd-navbar {
+          background-color: rgb(113, 108, 194);
+      }
       .center-me {
           margin: 0 auto;
       }
@@ -518,55 +521,116 @@
           padding-bottom: 100px;
       }
       h1 {
-        color: #7B90D2;
+        color: rgba(137, 107, 190, .8);
       }
       h2 {
         color: #585858;
+        padding-top: 10px;
+      }
+      h3 {
+        color: #585858;
+      }
+      h4 {
+        color: #585858;
+      }
+      h5 {
+        color: #585858;
+      }
+      h6 {
+        color: #585858;
+      }
+      .nav-link {
+        color: #7B90D2;
+      }
+      .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+          background-color: rgba(113, 108, 194, .6);
+          color: white;
+      }
+      .tab-content>.active {
+          padding: 10px;
+          padding-top: 20px;
+      }
+      @media (max-width: 992px) {
+        .navbar-wiki {
+            display: none;
+        }
+        .navbar-nav>.nav-link {
+            padding: 0;
+        }
+        .main-content {
+            margin: 0 auto;
+            padding: 0, 10px;
+        }
+        .main-page {
+            padding-top: 20px;
+            padding-bottom: 80px;
+        }
+        h2 {
+            font-size: 1.5em;
+        }
+        h3 {
+            font-size: 1.3em;
+        }
+        h4 {
+            font-size: 1.2em;
+        }
+        h5 {
+            font-size: 1em;
+        }
+        h6 {
+            font-size: 0.9em;
+        }
+      }
+      @media (min-width: 992px) {
+        .navbar-burger {
+            display: none;
+        }
+        .main-content {
+            margin: 0 auto;
+            padding-right: 100px;
+            padding-bottom: 120px;
+        }
+        .main-page {
+            padding-top: 40px;
+            padding-left: 200px;
+            padding-right: 300px;
+            padding-bottom: 80px;
+        }
       }
     </style>
 
     <title>Shing's Portfolio</title>
   </head>
 
-
   <body>
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/index" style="color: #7B90D2; ">Portfolio</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="/design" tabindex="-1" aria-disabled="true">Design<!--<span class="sr-only">(current)</span>--></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="weblab" tabindex="-1" aria-disabled="true">WebLab</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="sketch" tabindex="-1" aria-disabled="true">Sketch</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="photography" tabindex="-1" aria-disabled="true">Photography</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="adventure" tabindex="-1" aria-disabled="true">Adventure</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/about" tabindex="-1" aria-disabled="true">About</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>  
-
     {% block content %}{% endblock %}
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!--
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    -->
+    <!-- 国内CDN -->
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- Costume JavaScript -->
+    <script>
+        $(".nav-link").click(function(){
+            var parent = $(this).parent().parent().attr("id");
+            if (parent == "nav-content") {
+                var ref=$(this).attr('href')
+                $(this).parent().parent().children(".active").children(".active").removeClass("active");
+                $(this).parent().parent().children(".active").removeClass("active");
+                $(this).addClass("active");
+                $(this).parent().addClass("active");
+                $(".tab-content").children(".show").removeClass("show");
+                $(".tab-content").children(".active").removeClass("active");
+                $(".tab-content").children(ref).addClass("show");
+                $(".tab-content").children(ref).addClass("active");
+            }
+        });
+    </script>
   </body>
 </html>
