@@ -6,7 +6,7 @@
 语言：英语（6级）、日语（N2）  
 方向：人机交互 HCI 研究、服务设计、工业设计  
 软件：Adobe Ps Pr Id Ai An、Creo(Pro/E)、Sketch、AutoCAD、Keyshot、Rhino、SPSS  
-计算机语言：Python、HTML、CSS、JavaScript、Linux
+计算机语言（略懂）：Python、HTML、CSS、JavaScript、Linux
 
 ## 教育背景
 2015.8 - 2020.6，本科，哈尔滨工业大学，工业设计系  
@@ -46,8 +46,11 @@
 
 
 ## 社会实践
+2019.11，Phillips Design Workshop: Service concepts for Aging in Taiwan
+2019.10，云林在地創生UX工作營（日本UX設計專家, 預聘X-Design Academy 共同創辦人 淺野智教授）
 2018.7，两岸三地「孔子行腳」支教活动   
 2018.6，Design Workshop（Martin Thaler / 前 IDEO 设计师），担任助教  
 2017.10 - 2018.2，日本打工旅行，获得ラーメン一蘭 HOSPITALITY 等级证明  
 2016.9 - 2016.12，国际教育学院CET项目，美国学生的中国同屋   
+2016.6，Design Workshop（Martin Thaler / 前 IDEO 设计师）   
 2014.7，全国高中生商业挑战赛，副秘书长、实体经济板块主席
