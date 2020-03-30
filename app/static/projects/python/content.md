@@ -20,11 +20,11 @@
 
 ![](static/projects/python/process/data2)
 
-![](static/projects/python/process/data3)
+![](static/projects/python/process/data3.png)
 
 对美国大选的投票群体进行职业分析，得出不同候选人的受众职业分布。
 
-![](static/projects/python/process/data4)
+![](static/projects/python/process/data4.png)
 
 也可以通过 streamlit 直接生成 wep app 展示地理空间分析。
 
